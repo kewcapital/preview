@@ -66,4 +66,5 @@ WORKDIR "/app"
 COPY fonts /app/fonts/
 COPY --from=builder /app/preview .
 
-CMD ./preview
+CMD ["./preview"]
+STOPSIGNAL SIGINT
